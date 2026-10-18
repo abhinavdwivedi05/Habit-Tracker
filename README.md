@@ -1,78 +1,124 @@
-# React + TypeScript + Vite
+# Habit Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive Habit Tracker built with React, TypeScript, and Tailwind CSS. The application helps users track daily habits, monitor their consistency, and build better routines.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Habit Management** — View and manage your daily habits.
+- **Daily Tracking** — Mark habits as completed for individual days.
+- **Weekly Overview** — View dates and track progress across the week.
+- **Reusable Components** — Modular UI components for buttons, headers, and habit forms.
+- **Type Safety** — TypeScript interfaces and types for more maintainable code.
+- **Responsive UI** — A clean interface designed for everyday use.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **React** — Component-based user interface.
+- **TypeScript** — Static typing and improved developer experience.
+- **Tailwind CSS** — Utility-first styling.
+- **Vite** — Development server and build tooling.
+- **ESLint** — Code quality and linting.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Project Structure
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+Habit-Tracker/
+├── src/
+│   ├── components/
+│   │   ├── button.tsx
+│   │   ├── header.tsx
+│   │   ├── habitform.tsx
+│   │   └── habitlist.tsx
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── .gitignore
+├── index.html
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+*Note: The structure above reflects the files identified during development; update it if your project contains additional files or folders.*
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
 
-```
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- npm (included with Node.js)
+- Git
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/abhinavdwivedi05/Habit-Tracker.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd Habit-Tracker
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal, usually `http://localhost:5173`.
+
+## Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Starts the development server. |
+| `npm run build` | Builds the application for production. |
+| `npm run preview` | Previews the production build. |
+| `npm run lint` | Runs ESLint checks, if configured. |
+
+## Development Workflow
+
+1. Create or update reusable React components.
+2. Use TypeScript to define component props and data types.
+3. Style the interface using Tailwind CSS.
+4. Run the application locally and test changes.
+5. Commit changes and push them to GitHub.
+
+## Future Improvements
+
+- Persist habits using local storage or a database.
+- Add weekly and monthly progress statistics.
+- Display habit completion streaks.
+- Add habit categories and reminders.
+- Introduce charts to visualize consistency over time.
+
+## Contributing
+
+Contributions and suggestions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Open a pull request.
+
+## Author
+
+**Abhinav Dwivedi**
+
+- GitHub: [@abhinavdwivedi05](https://github.com/abhinavdwivedi05)
+
+---
+
+Built with React and TypeScript to encourage consistency and better daily habits.
